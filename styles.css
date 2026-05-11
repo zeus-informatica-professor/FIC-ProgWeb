@@ -149,6 +149,7 @@ body {
   background-color: lightgray;
   padding: 10px;
   color:aquamarine;
+  text-align: center;
   animation: flutuar 2s infinite alternate;
   transition: background-color 0.3s;
 }
@@ -177,4 +178,38 @@ body {
 
 .container p:hover {
   transform: rotateY(45deg);
+}
+
+/* Telas maiores que 768px (tablets) */
+@media (min-width: 768px) {
+  body {    
+    background-color: #40ff00;
+  }
+
+  .container {
+    padding: 20px;
+  }
+
+  .menu {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+/* Telas maiores que 1024px (desktop) */
+@media (min-width: 1024px) {
+  body {    
+    background-color: #0d00ff;
+  }
+
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .menu {
+    justify-content: flex-end;
+    gap: 20px;
+  }
 }
