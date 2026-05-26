@@ -1,4 +1,105 @@
-let pessoas = [];
+let listaPessoas = "Ana-15,João-28,Carlos-17,Maria-50"; // Atividade Processamento de string
+let nomes = listaPessoas.split(",");
+let pessoas = []; //Para primeira atividade de lista a partir da página
+//https://github.com/zeus-informatica-professor/FIC-ProgWeb
+
+//Testes lógicos:
+// TABELA DE COMPARAÇÃO
+
+function testar(resultado, idElemento) {
+
+    let elemento =
+        document.getElementById(idElemento);
+
+    elemento.innerText = resultado;
+
+    if (resultado) {
+
+        elemento.className =
+            "resultado verdadeiro";
+
+    } else {
+
+        elemento.className =
+            "resultado falso";
+
+    }
+
+}
+
+document.getElementById("igual").innerText =
+    5 == "5";
+
+document.getElementById("estrito").innerText =
+    5 === "5";
+
+document.getElementById("diferente").innerText =
+    5 != 3;
+
+document.getElementById("maior").innerText =
+    10 > 5;
+
+document.getElementById("menor").innerText =
+    3 < 8;
+
+// IF / ELSE
+
+function verificarIdade() {
+    let idade = Number(document.getElementById("idadeTeste").value);
+    
+    if (idade >= 18) {
+        document.getElementById("resultadoIf").innerText =
+            "Maior de idade";
+    } else {
+        document.getElementById("resultadoIf").innerText =
+            "Menor de idade";
+    }
+}
+
+// SWITCH
+
+function menuBanco() {
+
+    let opcao =
+        Number(document.getElementById("opcao").value);
+
+    switch (opcao) {
+
+        case 1:
+
+            document.getElementById("resultadoSwitch").innerText =
+                "Mostrando saldo";
+
+            break;
+
+        case 2:
+
+            document.getElementById("resultadoSwitch").innerText =
+                "Realizando saque";
+
+            break;
+
+        case 3:
+
+            document.getElementById("resultadoSwitch").innerText =
+                "Realizando depósito";
+
+            break;
+
+        default:
+
+            document.getElementById("resultadoSwitch").innerText =
+                "Opção inválida";
+
+    }
+
+}
+
+
+
+
+
+//Exemplos iniciais:
 
 function adicionar() {
     let nome = document.getElementById("nome").value;
@@ -7,6 +108,18 @@ function adicionar() {
     if (nome === "" || idade <= 0) {
         alert("Preencha corretamente!");
         return;
+    }
+
+    nomes.forEach(function (nome) {
+        console.log("forEach1 : " + nome);
+    });
+
+    nomes.forEach((nome) => {
+        console.log("forEach2 : " + nome);
+    });
+
+    for (let nome of nomes) {
+        console.log("for let : " + nome);
     }
 
     pessoas.push({ nome: nome, idade: idade });
@@ -26,7 +139,7 @@ function analisar() {
     }
 
     // 🔥 ordenar por idade (crescente)
-    pessoas.sort(function(a, b) {
+    pessoas.sort(function (a, b) {
         return a.idade - b.idade;
     });
 

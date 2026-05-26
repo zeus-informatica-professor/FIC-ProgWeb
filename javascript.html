@@ -1,24 +1,179 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Sistema de Cadastro</title>
+    <link rel="stylesheet" href="javascript-css.css">
 </head>
+
 <body>
 
-<h1>Cadastro de Pessoas</h1>
 
-<input type="text" id="nome" placeholder="Nome">
-<input type="number" id="idade" placeholder="Idade">
+    <h1>Cadastro de Pessoas</h1>
 
-<button onclick="adicionar()">Adicionar</button>
-<button onclick="analisar1()">Analisar</button>
+    <input type="text" id="nome" placeholder="Nome">
+    <input type="number" id="idade" placeholder="Idade">
 
-<h2>Lista de Pessoas:</h2>
-<ul id="lista"></ul>
+    <button onclick="adicionar()">Adicionar</button>
+    <button onclick="analisar1()">Analisar</button>
 
-<h2 id="resultado"></h2>
+    <h2>Lista de Pessoas:</h2>
+    <ul id="lista"></ul>
 
-<script src="script.js"></script>
+    <h2 id="resultado"></h2>
+
+
+    <p>---------------------------------------------------------------------</p>
+    <h1>Estruturas Condicionais em JavaScript</h1>
+
+    <!-- TABELA DE COMPARAÇÃO -->
+
+    <h1>Operadores de Comparação em JavaScript</h1>
+
+    <table>
+        <tr>
+            <th>Operador</th>
+            <th>Exemplo</th>
+            <th>Testar</th>
+            <th>Resultado</th>
+        </tr>
+
+        <tr>
+            <td>==</td>
+            <td>5 == "5"</td>
+            <td>
+                <button onclick='testar(5 == "5", "r1")'>
+                    Testar
+                </button>
+            </td>
+            <td id="r1" class="resultado"></td>
+        </tr>
+
+        <tr>
+            <td>===</td>
+            <td>5 === "5"</td>
+            <td>
+                <button onclick='testar(5 === "5", "r2")'>
+                    Testar
+                </button>
+            </td>
+            <td id="r2" class="resultado"></td>
+        </tr>
+
+        <tr>
+            <td>!=</td>
+            <td>5 != 3</td>
+            <td>
+                <button onclick='testar(5 != 3, "r3")'>
+                    Testar
+                </button>
+            </td>
+            <td id="r3" class="resultado"></td>
+        </tr>
+
+        <tr>
+            <td>></td>
+            <td>10 > 5</td>
+            <td>
+                <button onclick='testar(10 > 5, "r4")'>
+                    Testar
+                </button>
+            </td>
+            <td id="r4" class="resultado"></td>
+        </tr>
+
+        <tr>
+            <td>&lt;</td>
+            <td>3 < 8</td>
+            <td>
+                <button onclick='testar(3 < 8, "r5")'>
+                    Testar
+                </button>
+            </td>
+            <td id="r5" class="resultado"></td>
+        </tr>
+    </table>
+
+    <!-- EXEMPLO IF / ELSE -->
+
+    <div class="bloco">
+
+        <h2>Exemplo com IF / ELSE</h2>
+
+        <label>Digite sua idade:</label>
+        <br>
+        <input type="number" id="idadeTeste">
+        <button onclick="verificarIdade()">
+            Verificar
+        </button>
+        <p id="resultadoIf"></p>
+        <h3>Código utilizado:</h3>
+
+        <pre>
+if (idade >= 18) {
+
+console.log("Maior de idade");
+
+} else {
+
+console.log("Menor de idade");
+
+}
+</pre>
+
+    </div>
+
+    <!-- EXEMPLO SWITCH -->
+
+    <div class="bloco">
+
+        <h2>Exemplo com SWITCH</h2>
+
+        <label>Escolha uma opção:</label>
+
+        <br>
+
+        <select id="opcao">
+
+            <option value="1">1 - Saldo</option>
+            <option value="2">2 - Saque</option>
+            <option value="3">3 - Depósito</option>
+
+        </select>
+
+        <button onclick="menuBanco()">
+            Executar
+        </button>
+
+        <p id="resultadoSwitch"></p>
+
+        <h3>Código utilizado:</h3>
+
+        <pre>
+switch(opcao) {
+
+case 1:
+    console.log("Saldo");
+    break;
+
+case 2:
+    console.log("Saque");
+    break;
+
+case 3:
+    console.log("Depósito");
+    break;
+
+default:
+    console.log("Inválido");
+
+}
+</pre>
+
+    </div>
+
+    <script src="script.js"></script>
 
 </body>
+
 </html>
