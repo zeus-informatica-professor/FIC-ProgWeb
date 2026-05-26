@@ -92,6 +92,50 @@
             </td>
             <td id="r5" class="resultado"></td>
         </tr>
+
+        <tr>
+            <td>&lt;=</td>
+            <td>3 >= 8</td>
+            <td>
+                <button onclick='testar(3 >= 8, "r6")'>
+                    Testar
+                </button>
+            </td>
+            <td id="r6" class="resultado"></td>
+        </tr>
+
+        <tr>
+            <td>&lt;=</td>
+            <td>3 <= 8</td>
+            <td>
+                <button onclick='testar(3 <= 8, "r7")'>
+                    Testar
+                </button>
+            </td>
+            <td id="r7" class="resultado"></td>
+        </tr>
+
+        <tr>
+            <td> && </td>
+            <td>true && true</td>
+            <td>
+                <button onclick='testar(true && true, "r8")'>
+                    Testar
+                </button>
+            </td>
+            <td id="r8" class="resultado"></td>
+        </tr>
+
+        <tr>
+            <td>||</td>
+            <td>true || false</td>
+            <td>
+                <button onclick='testar(true || false, "r9")'>
+                    Testar
+                </button>
+            </td>
+            <td id="r9" class="resultado"></td>
+        </tr>
     </table>
 
     <!-- EXEMPLO IF / ELSE -->
@@ -171,6 +215,72 @@ default:
 </pre>
 
     </div>
+
+    <h1>Diferença entre WHILE e DO WHILE</h1>
+
+    <p>
+        Observe o comportamento visual de cada estrutura.
+    </p>
+
+    <div class="container">
+
+        <!-- WHILE -->
+        <pre>
+            let contador = 10;
+            while (contador < 5) {
+                area.innerHTML += "<div class='caixa'>WHILE executou</div>";
+            contador++; 
+            }
+        </pre>
+
+        <div class="bloco">
+
+            <h2>WHILE</h2>
+
+            <p>
+                O while verifica a condição ANTES.
+            </p>
+
+            <button onclick="executarWhile()">
+                Executar While
+            </button>
+
+            <div id="whileResultado" class="resultado"></div>
+
+        </div>
+
+        <!-- DO WHILE -->
+
+        <pre>
+            let contador = 10;
+            do {
+                area.innerHTML += "<div class='caixa'>DO WHILE executou</div>";
+                contador++;
+            }while (contador < 5);
+        </pre>
+
+        <div class="bloco">
+
+            <h2>DO WHILE</h2>
+
+            <p>
+                O do while executa primeiro e verifica depois.
+            </p>
+
+            <button onclick="executarDoWhile()">
+                Executar Do While
+            </button>
+
+            <div id="doWhileResultado" class="resultado"></div>
+
+        </div>
+
+    </div>
+
+
+
+
+
 
     <script src="script.js"></script>
 

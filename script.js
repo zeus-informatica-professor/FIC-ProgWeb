@@ -3,9 +3,51 @@ let nomes = listaPessoas.split(",");
 let pessoas = []; //Para primeira atividade de lista a partir da página
 //https://github.com/zeus-informatica-professor/FIC-ProgWeb
 
+function executarWhile() {
+
+    let contador = 10;
+
+    let area =
+        document.getElementById("whileResultado");
+
+    area.innerHTML = "";
+
+    while (contador < 5) {
+
+        area.innerHTML +=
+            "<div class='caixa'>WHILE executou</div>";
+
+        contador++;
+
+    }
+
+}
+
+function executarDoWhile() {
+
+    let contador = 10;
+
+    let area =
+        document.getElementById("doWhileResultado");
+
+    area.innerHTML = "";
+
+    do {
+
+        area.innerHTML +=
+            "<div class='caixa'>DO WHILE executou</div>";
+
+        contador++;
+
+    }
+
+    while (contador < 5);
+
+}
+
+
 //Testes lógicos:
 // TABELA DE COMPARAÇÃO
-
 function testar(resultado, idElemento) {
 
     let elemento =
@@ -57,29 +99,28 @@ function verificarIdade() {
 }
 
 // SWITCH
-
 function menuBanco() {
 
     let opcao =
-        Number(document.getElementById("opcao").value);
+        document.getElementById("opcao").value;
 
     switch (opcao) {
 
-        case 1:
+        case "1":
 
             document.getElementById("resultadoSwitch").innerText =
                 "Mostrando saldo";
 
             break;
 
-        case 2:
+        case "2":
 
             document.getElementById("resultadoSwitch").innerText =
                 "Realizando saque";
 
             break;
 
-        case 3:
+        case "3":
 
             document.getElementById("resultadoSwitch").innerText =
                 "Realizando depósito";
@@ -94,9 +135,6 @@ function menuBanco() {
     }
 
 }
-
-
-
 
 
 //Exemplos iniciais:
