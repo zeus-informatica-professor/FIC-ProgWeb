@@ -1,8 +1,30 @@
 let listaPessoas = "Ana-15,João-28,Carlos-17,Maria-50"; // Atividade Processamento de string
 let nomes = listaPessoas.split(",");
-let pessoas = []; //Para primeira atividade de lista a partir da página
+let pessoas = [];
 //https://github.com/zeus-informatica-professor/FIC-ProgWeb
 
+//#region Listeners de Botões
+let doWhileBotao = document.getElementById("doWhileButtom");
+doWhileBotao.addEventListener(
+    "click",
+    executarDoWhile
+);
+
+let whileBotao = document.getElementById("whileButton");
+whileBotao.addEventListener(
+    "click",
+    executarWhile
+);
+
+let menuBancoButton = document.getElementById("menuBancoButton");
+menuBancoButton.addEventListener(
+    "click",
+    menuBanco
+);
+
+//#endregion
+
+//#region Funções de teste de laços While e DoWhile
 function executarWhile() {
 
     let contador = 10;
@@ -44,9 +66,9 @@ function executarDoWhile() {
     while (contador < 5);
 
 }
+//#endregion
 
-
-//Testes lógicos:
+//#region Testes lógicos:
 // TABELA DE COMPARAÇÃO
 function testar(resultado, idElemento) {
 
@@ -88,7 +110,7 @@ document.getElementById("menor").innerText =
 
 function verificarIdade() {
     let idade = Number(document.getElementById("idadeTeste").value);
-    
+
     if (idade >= 18) {
         document.getElementById("resultadoIf").innerText =
             "Maior de idade";
@@ -98,7 +120,25 @@ function verificarIdade() {
     }
 }
 
-// SWITCH
+//#endregion
+
+//#region Funções de teste
+function soma1() {
+    let a = document.getElementById("id").value;
+    let b = document.getElementById("id").value;
+
+    return a + b;
+}
+
+function some2() {
+    let a = document.getElementById("id").value;
+    let b = document.getElementById("id").value;
+
+    return a + b;
+}
+//#endregion
+
+//#region SWITCH
 function menuBanco() {
 
     let opcao =
@@ -107,10 +147,8 @@ function menuBanco() {
     switch (opcao) {
 
         case "1":
-
             document.getElementById("resultadoSwitch").innerText =
                 "Mostrando saldo";
-
             break;
 
         case "2":
@@ -135,10 +173,9 @@ function menuBanco() {
     }
 
 }
+//#endregion
 
-
-//Exemplos iniciais:
-
+//#region Exemplos iniciais:
 function adicionar() {
     let nome = document.getElementById("nome").value;
     let idade = Number(document.getElementById("idade").value);
@@ -233,3 +270,4 @@ function analisar1() {
         " | Média de idade: " + media.toFixed(1) +
         " | Maiores de idade: " + maiores;
 }
+//#endregion
